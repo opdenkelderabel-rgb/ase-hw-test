@@ -1,0 +1,52 @@
+{
+  "name": "regex-language",
+  "displayName": "Regex",
+  "description": "Simple regex pattern language",
+  "version": "0.1.0",
+  "publisher": "ftsrg",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./build/vscode/extension/main.cjs",
+  "contributes": {
+    "languages": [
+      {
+        "id": "regex",
+        "aliases": ["Regex", "regex"],
+        "extensions": [".regex"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "regex",
+        "scopeName": "source.regex",
+        "path": "./syntaxes/regex.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "generate": "langium generate",
+    "bundle": "node esbuild.mjs",
+    "typecheck": "tsc",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "langium": "~4.4.0",
+    "vscode-languageclient": "~10.1.0",
+    "vscode-languageserver": "~10.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "~22.12.0",
+    "@types/vscode": "~1.91.0",
+    "esbuild": "~0.25.0",
+    "langium-cli": "~4.4.0",
+    "typescript": "~5.9.3",
+    "vitest": "~3.2.4"
+  }
+}

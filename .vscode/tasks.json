@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Bundle Regex Editor",
+            "type": "shell",
+            "command": "./gradlew :regex-language:bundle",
+            "windows": {
+                "command": ".\\gradlew.bat :regex-language:bundle"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "projectName": "Regex",
+    "languages": [
+        {
+            "id": "regex",
+            "grammar": "src/regex.langium",
+            "fileExtensions": [".regex"],
+            "textMate": {
+                "out": "syntaxes/regex.tmLanguage.json"
+            }
+        }
+    ],
+    "out": "src/language/generated"
+}
